@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta
+         name="viewport"
+         content="width=device-width, initial-scale=1.0" />
+      <title>Expense Tracker</title>
+      <link
+         rel="stylesheet"
+         href="style.css" />
+   </head>
+   <body>
+      <!-- HEADER -->
+      <header class="app-header">
+         <h1>Expense Tracker</h1>
+         <select class="month-selector">
+            <option value="">Filter by Month</option>
+            <option value="0">January 2025</option>
+            <option value="1">February 2025</option>
+            <option value="2">March 2025</option>
+         </select>
+      </header>
+
+      <!-- SUMMARY -->
+      <section class="summary">
+         <div class="card balance">
+            <p>Total Balance</p>
+            <h2 class="bal">$12,450</h2>
+         </div>
+         <div class="card income">
+            <p>Income</p>
+            <h2 class="inc">$6,800</h2>
+         </div>
+         <div class="card expense">
+            <p>Expenses</p>
+            <h2 class="exp">$4,350</h2>
+         </div>
+      </section>
+
+      <!-- MAIN -->
+      <main class="main-grid">
+         <!-- ADD EXPENSE -->
+         <section class="add-expense">
+            <h3>Add New Transaction</h3>
+
+            <form class="expense-form">
+               <input
+                  type="text"
+                  placeholder="Description"
+                  class="expDesc" />
+               <input
+                  type="number"
+                  placeholder="Amount"
+                  class="expAmo" />
+
+               <select class="expType">
+                  <option value="">Select Income Type</option>
+                  <option value="Income">Income</option>
+                  <option value="Expenses">Expense</option>
+               </select>
+
+               <select class="expPurp">
+                  <option value="">Select Expenses Purpose </option>
+                  <option value="Food">Food</option>
+                  <option value="Transport">Transport</option>
+                  <option value="Rent">Rent</option>
+                  <option value="Utilities">Utilities</option>
+                  <option value="Others">Other</option>
+               </select>
+
+               <input
+                  type="date"
+                  class="expdDte" />
+
+               <button type="submit">Add Transaction</button>
+            </form>
+         </section>
+
+         <!-- TRANSACTIONS -->
+         <section class="transactions">
+            <h3>Transactions</h3>
+
+            <div class="transaction-list">
+               <div class="transaction income">
+                  <span class="tag">Income</span>
+                  <p class="title">Salary</p>
+                  <p class="amount">+ $3,000</p>
+                  <p class="date">2025-01-02</p>
+               </div>
+
+               <div class="transaction expense">
+                  <span class="tag">Food</span>
+                  <p class="title">Groceries</p>
+                  <p class="amount">- $120</p>
+                  <p class="date">2025-01-05</p>
+               </div>
+
+               <div class="transaction expense">
+                  <span class="tag">Transport</span>
+                  <p class="title">Uber</p>
+                  <p class="amount">- $45</p>
+                  <p class="date">2025-01-06</p>
+               </div>
+            </div>
+         </section>
+      </main>
+      <script
+         src="script.js"
+         type="module"></script>
+   </body>
+</html>
